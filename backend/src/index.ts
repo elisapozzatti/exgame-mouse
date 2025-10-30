@@ -9,9 +9,13 @@ import logger from "./middlewares/logger";
 import examsRoute from "./routes/exams";
 import serverRoute from "./routes/server";
 import subscriptionsRoute from "./routes/subscriptions";
+import mongoose from "mongoose";
+import { dbClient } from "./lib/db"
 
 const app = new Koa();
 const router = new Router();
+
+app.use(dbClient);
 
 app.use(logger);
 app.use(bodyParser());

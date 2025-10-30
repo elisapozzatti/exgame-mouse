@@ -2,7 +2,6 @@ import { instrument } from "@socket.io/admin-ui";
 import http from "http";
 import { Server } from "socket.io";
 import { SubscriptionAction, User } from "./types";
-
 // Follow https://socket.io/docs/v4/server-application-structure/ for organizing handlers
 
 export const initSocketIo = (httpServer: http.Server) => {
